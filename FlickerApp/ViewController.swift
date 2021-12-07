@@ -23,15 +23,16 @@ class ViewController: UIViewController
     @IBAction func doSearch()
     {
         let searchTerm = searchTextField.text!
-        FlickerApi.searchFlicker(for: searchTerm) { data in
-            if let mData = data{
+        
+        FlickerApi.searchFlicker(for: searchTerm)
+        { data in
+            if let mData = data
+            {
                 self.photos = FlickerApi.convertJsonToPhotos(data: mData)!
-                
-                print("we found \(self.photos.count)")
             }
         }
-        
     }
+    
     
     override func viewDidLoad()
     {

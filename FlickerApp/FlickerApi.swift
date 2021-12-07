@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 let apiKey = "b61ae7a29725bf8c55e94e28c5a8e3b9"
 
@@ -33,7 +34,7 @@ class FlickerApi
         
 //            let string = try? JSONSerialization.data(withJSONObject: photoDic, options: .prettyPrinted)
 //            let founPghotos : [Photo] = try! JSONDecoder().decode([Photo].self, from: string!)
-//this two lines work as for loop that under this comment 
+//this two lines work as for loop that under this comment
         
         var foundPhotos : [Photo] = []
         for any in photoDic
@@ -47,5 +48,27 @@ class FlickerApi
         }
             
         return foundPhotos
+    }
+    
+    static func getSingleImage (for photo: Photo, completion: @escaping (UIImage) -> Void)
+    {
+        let urlStr = "https://live.staticflickr.com/\(photo.server)/\(photo.id)_\(photo.secret)_m.jpg"
+        
+        let url = URL(string: urlStr)!
+        
+        DispatchQueue.global(qos: .background).async
+        {
+            let task = URLSession.shared.dataTask(with: URLRequest(url: url))
+            { data, res, err in
+                if data != nil
+                {
+                    if let img = UIImage (data: data!)
+                    {
+                        completion(img)
+                    }
+                }
+            }
+            task.resume()
+        }
     }
 }
