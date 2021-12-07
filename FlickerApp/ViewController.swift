@@ -1,17 +1,5 @@
 import UIKit
 
-/*
- api_key : b61ae7a29725bf8c55e94e28c5a8e3b9
- 
- url_sample : https://live.staticflickr.com/{server-id}/{id}_{secret}_{size-suffix}.jpg
-
- https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=\()&text=\()&format=json&nojsoncallback=1
- 
- */
-
-
-
-
 class ViewController: UIViewController
 {
     @IBOutlet weak var searchTextField: UITextField!
@@ -60,8 +48,23 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource
         }
         return cell
     }
-    
+}
 
-    
-
+extension ViewController{
+    override func viewDidLoad() {
+        self.view.layoutIfNeeded()
+        self.myCollectionView.layoutIfNeeded()
+        let size = myCollectionView.bounds.width / CGFloat( 3 )
+        
+        let layout = UICollectionViewFlowLayout ()
+        layout.itemSize = CGSize(width: size, height: size)
+        
+        layout.sectionInset = UIEdgeInsets.zero
+        layout.minimumLineSpacing = 0.0
+        layout.minimumInteritemSpacing = 0.0
+        
+        
+        myCollectionView.collectionViewLayout = layout
+        myCollectionView.reloadData()
+    }
 }
