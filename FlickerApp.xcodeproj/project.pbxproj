@@ -14,6 +14,7 @@
 		9C5F9ECF2758CF2500595CB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C5F9ECE2758CF2500595CB4 /* Assets.xcassets */; };
 		9C5F9ED22758CF2500595CB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C5F9ED02758CF2500595CB4 /* LaunchScreen.storyboard */; };
 		9C5F9EDA2758D25A00595CB4 /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5F9ED92758D25A00595CB4 /* MyCell.swift */; };
+		9CA0B5EF275F867D00D30D32 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0B5EE275F867D00D30D32 /* Photo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		9C5F9ED12758CF2500595CB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C5F9ED32758CF2500595CB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C5F9ED92758D25A00595CB4 /* MyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
+		9CA0B5EE275F867D00D30D32 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				9C5F9EC52758CF2500595CB4 /* AppDelegate.swift */,
 				9C5F9EC72758CF2500595CB4 /* SceneDelegate.swift */,
 				9C5F9EC92758CF2500595CB4 /* ViewController.swift */,
+				9CA0B5EE275F867D00D30D32 /* Photo.swift */,
 				9C5F9ECB2758CF2500595CB4 /* Main.storyboard */,
 				9C5F9ED92758D25A00595CB4 /* MyCell.swift */,
 				9C5F9ECE2758CF2500595CB4 /* Assets.xcassets */,
@@ -145,6 +148,7 @@
 				9C5F9EDA2758D25A00595CB4 /* MyCell.swift in Sources */,
 				9C5F9EC62758CF2500595CB4 /* AppDelegate.swift in Sources */,
 				9C5F9EC82758CF2500595CB4 /* SceneDelegate.swift in Sources */,
+				9CA0B5EF275F867D00D30D32 /* Photo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
