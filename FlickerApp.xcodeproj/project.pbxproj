@@ -15,6 +15,7 @@
 		9C5F9ED22758CF2500595CB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C5F9ED02758CF2500595CB4 /* LaunchScreen.storyboard */; };
 		9C5F9EDA2758D25A00595CB4 /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5F9ED92758D25A00595CB4 /* MyCell.swift */; };
 		9CA0B5EF275F867D00D30D32 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0B5EE275F867D00D30D32 /* Photo.swift */; };
+		9CA0B5F1275F89BC00D30D32 /* FlickerApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA0B5F0275F89BC00D30D32 /* FlickerApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		9C5F9ED32758CF2500595CB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C5F9ED92758D25A00595CB4 /* MyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
 		9CA0B5EE275F867D00D30D32 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		9CA0B5F0275F89BC00D30D32 /* FlickerApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickerApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				9CA0B5EE275F867D00D30D32 /* Photo.swift */,
 				9C5F9ECB2758CF2500595CB4 /* Main.storyboard */,
 				9C5F9ED92758D25A00595CB4 /* MyCell.swift */,
+				9CA0B5F0275F89BC00D30D32 /* FlickerApi.swift */,
 				9C5F9ECE2758CF2500595CB4 /* Assets.xcassets */,
 				9C5F9ED02758CF2500595CB4 /* LaunchScreen.storyboard */,
 				9C5F9ED32758CF2500595CB4 /* Info.plist */,
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C5F9ECA2758CF2500595CB4 /* ViewController.swift in Sources */,
+				9CA0B5F1275F89BC00D30D32 /* FlickerApi.swift in Sources */,
 				9C5F9EDA2758D25A00595CB4 /* MyCell.swift in Sources */,
 				9C5F9EC62758CF2500595CB4 /* AppDelegate.swift in Sources */,
 				9C5F9EC82758CF2500595CB4 /* SceneDelegate.swift in Sources */,

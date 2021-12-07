@@ -21,6 +21,12 @@ class ViewController: UIViewController
     @IBAction func doSearch()
     {
         let searchTerm = searchTextField.text!
+        FlickerApi.searchFlicker(for: searchTerm) { data in
+            if let mData = data{
+                print(mData)
+            }
+        }
+        
     }
     
     override func viewDidLoad()
