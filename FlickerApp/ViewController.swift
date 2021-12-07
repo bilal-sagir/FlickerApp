@@ -29,15 +29,39 @@ class ViewController: UIViewController
             if let mData = data
             {
                 self.photos = FlickerApi.convertJsonToPhotos(data: mData)!
+                
+                DispatchQueue.main.async {
+                    self.myCollectionView.reloadData()
+                }
             }
         }
     }
-    
-    
-    override func viewDidLoad()
-    {
-        super.viewDidLoad()
-    }
-
 }
 
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource
+{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    {
+        photos.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
+    {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! MyCell
+        
+        cell.photo = photos[indexPath.row]
+        
+        FlickerApi.getSingleImage(for: cell.photo)
+        { img in
+            DispatchQueue.main.async
+            {
+                cell.imgView.image = img
+            }
+        }
+        return cell
+    }
+    
+
+    
+
+}
