@@ -20,6 +20,32 @@ class FlickerApi
             complition(data)
         }
         task.resume()
+    }
+    
+    static func convertJsonToPhotos (data: Data) -> [Photo]?
+    {
+        guard let json = try? JSONSerialization.jsonObject(with: data, options: [] ) else {return nil}
         
+        guard let results = json as? [String : Any] else {return nil}
+        
+        guard let photos = results["photos"] as? [String : Any],
+              let photoDic = photos["photo"] as? [[String : Any]] else {return nil}
+        
+//            let string = try? JSONSerialization.data(withJSONObject: photoDic, options: .prettyPrinted)
+//            let founPghotos : [Photo] = try! JSONDecoder().decode([Photo].self, from: string!)
+//this two lines work as for loop that under this comment 
+        
+        var foundPhotos : [Photo] = []
+        for any in photoDic
+        {
+            let string = try? JSONSerialization.data(withJSONObject: any, options: .prettyPrinted)
+            
+            let photo = try? JSONDecoder().decode(Photo.self, from: string!)
+            
+            foundPhotos.append(photo!)
+            
+        }
+            
+        return foundPhotos
     }
 }

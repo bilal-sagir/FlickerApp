@@ -18,12 +18,16 @@ class ViewController: UIViewController
     
     @IBOutlet weak var myCollectionView: UICollectionView!
     
+    var photos : [Photo] = []
+    
     @IBAction func doSearch()
     {
         let searchTerm = searchTextField.text!
         FlickerApi.searchFlicker(for: searchTerm) { data in
             if let mData = data{
-                print(mData)
+                self.photos = FlickerApi.convertJsonToPhotos(data: mData)!
+                
+                print("we found \(self.photos.count)")
             }
         }
         
